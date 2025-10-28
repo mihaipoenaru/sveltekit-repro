@@ -1,13 +1,7 @@
 <script lang="ts">
-	import { reproRemote } from './repro.remote';
-	import ReproComp from '$lib/ReproComp.svelte';
+    import {resolve} from '$app/paths'
 
-	const { value, ...others } = reproRemote.fields.surname.as('text');
+
 </script>
 
-<form {...reproRemote}>
-	<ReproComp {...reproRemote.fields.name.as('text')} class="border" />
-
-	<p>with value removed: {value}</p>
-	<ReproComp {...others} class="border" />
-</form>
+<a href={resolve('/sub')}>next</a>

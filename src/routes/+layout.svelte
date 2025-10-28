@@ -8,4 +8,10 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
+<svelte:boundary>
 {@render children?.()}
+
+	{#snippet pending()}
+		<div>Loading...</div>
+	{/snippet}
+</svelte:boundary>

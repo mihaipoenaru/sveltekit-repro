@@ -1,6 +1,7 @@
-import { form } from '$app/server';
+import {form, query} from '$app/server';
 import z from 'zod';
 
-export const reproRemote = form(z.object({name: z.string(), surname: z.string()}), () => {
-
-});
+export const func = query(async () => {
+    await new Promise(resolve => setTimeout(resolve, 5000));
+    return {success: true};
+})
